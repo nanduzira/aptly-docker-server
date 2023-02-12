@@ -10,8 +10,8 @@
 # http://seriyps.ru/blog/2010/05/30/basic-http-avtorizaciya-dlya-nginx/
 # https://www.aptly.info/doc/faq/
 
-: ${USER:=${1}}
-: ${PASS:=${2}}
+USER=${1}
+PASS=${2}
 
 [[ -z ${USER} ]] && { echo "User wasn't specified"; exit 1; }
 [[ -z ${PASS} ]] && { echo "Pass wasn't specified"; exit 1; }
