@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "1374e0a6-bf4b-4e4c-97f0-507df8a96bb9",
+		"name": "Aptly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7185774"
+	},
+	"item": [
+		{
+			"name": "File Upload",
+			"item": [
+				{
+					"name": "Upload files",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/files/:dir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"files",
+								":dir"
+							],
+							"variable": [
+								{
+									"key": "dir",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List directories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List files in directory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/files/:dir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"files",
+								":dir"
+							],
+							"variable": [
+								{
+									"key": "dir",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete directory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/files/:dir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"files",
+								":dir"
+							],
+							"variable": [
+								{
+									"key": "dir",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete files in directory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/files/:dir/:file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"files",
+								":dir",
+								":file"
+							],
+							"variable": [
+								{
+									"key": "dir",
+									"value": null
+								},
+								{
+									"key": "file",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Local Repos",
+			"item": [
+				{
+					"name": "Add packages from uploaded file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/repos/:name/file/:dir/:file?noRemove=1&forceReplace=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"repos",
+								":name",
+								"file",
+								":dir",
+								":file"
+							],
+							"query": [
+								{
+									"key": "noRemove",
+									"value": "1"
+								},
+								{
+									"key": "forceReplace",
+									"value": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "dir",
+									"value": null
+								},
+								{
+									"key": "file",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add packages from uploaded dir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/repos/:name/file/:dir?noRemove=1&forceReplace",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"repos",
+								":name",
+								"file",
+								":dir"
+							],
+							"query": [
+								{
+									"key": "noRemove",
+									"value": "1"
+								},
+								{
+									"key": "forceReplace",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "dir",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publish",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish local repo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"SourceKind\": \"local\",\n    \"Sources\": [\n        {\n            \"Name\": \"repo\",\n            \"Component\": \"main\"\n        }\n    ],\n    \"Storage\": \"s3:test\",\n    \"Architectures\": [\n        \"i386\",\n        \"amd64\"\n    ],\n    \"Distribution\": \"bionic\",\n    \"Signing\": {\n        \"Batch\": true,\n        \"Passphrase\": \"\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/publish/:prefix",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"publish",
+								":prefix"
+							],
+							"variable": [
+								{
+									"key": "prefix",
+									"value": "s3:test:."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update published local repo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ForceOverwrite\": false,\n    \"Signing\": {\n        \"batch\": true,\n        \"Passphrase\": \"\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/publish/:prefix/:distribution",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"publish",
+								":prefix",
+								":distribution"
+							],
+							"variable": [
+								{
+									"key": "prefix",
+									"value": "s3:test:."
+								},
+								{
+									"key": "distribution",
+									"value": "bionic"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drop published repo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/publish/:prefix/:distribution",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"publish",
+								":prefix",
+								":distribution"
+							],
+							"variable": [
+								{
+									"key": "prefix",
+									"value": ""
+								},
+								{
+									"key": "distribution",
+									"value": "bionic"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
