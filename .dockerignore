@@ -1,5 +1,6 @@
 docker-compose.yml
 gen-htpasswd.sh
 README.md
+nginx.conf
 vs.code-workspace
 *.postman_collection.json
