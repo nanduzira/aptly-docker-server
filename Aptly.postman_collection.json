@@ -25,12 +25,11 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/files/:dir",
+							"raw": "http://{{base_url}}/api/files/:dir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"files",
@@ -52,12 +51,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/files",
+							"raw": "http://{{base_url}}/api/files",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"files"
@@ -72,12 +70,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/files/:dir",
+							"raw": "http://{{base_url}}/api/files/:dir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"files",
@@ -99,12 +96,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/files/:dir",
+							"raw": "http://{{base_url}}/api/files/:dir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"files",
@@ -126,12 +122,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/files/:dir/:file",
+							"raw": "http://{{base_url}}/api/files/:dir/:file",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"files",
@@ -163,12 +158,11 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/repos/:name/file/:dir/:file?noRemove=1&forceReplace=",
+							"raw": "http://{{base_url}}/api/repos/:name/file/:dir/:file?noRemove=1&forceReplace=",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"repos",
@@ -211,12 +205,11 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/repos/:name/file/:dir?noRemove=1&forceReplace",
+							"raw": "http://{{base_url}}/api/repos/:name/file/:dir?noRemove=1&forceReplace",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"repos",
@@ -259,12 +252,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/publish",
+							"raw": "http://{{base_url}}/api/publish",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"publish"
@@ -288,12 +280,11 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/publish/:prefix",
+							"raw": "http://{{base_url}}/api/publish/:prefix",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"publish",
@@ -324,12 +315,11 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/publish/:prefix/:distribution",
+							"raw": "http://{{base_url}}/api/publish/:prefix/:distribution",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"publish",
@@ -365,12 +355,11 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/publish/:prefix/:distribution",
+							"raw": "http://{{base_url}}/api/publish/:prefix/:distribution",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"publish",
@@ -415,6 +404,13 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080",
+			"type": "string"
 		}
 	]
 }
