@@ -48,6 +48,8 @@ Region = '<AWS_REGION>'" | sudo tee /etc/apt/s3auth.conf
 
 ❯ curl -sL http://<YOUR_HOST_FOR_APTLY>/repo_signing.key | gpg2 --dearmor | sudo tee /etc/apt/trusted.gpg.d/<HOST_REPO>.gpg >/dev/null
 
+❯ echo "deb [arch=amd64] s3://<S3_BUCKET>/<REPO_PREFIX> bionic main" | sudo tee /etc/apt/sources.list.d/<REPO_NAME>.list
+
 ❯ sudo apt update
 
 ```
