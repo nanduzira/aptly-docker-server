@@ -43,7 +43,7 @@
 ❯ sudo apt install apt-transport-s3 gnupg2
 
 ❯ echo "AccessKeyId = <ACCESS_KEY_ID>
-SecretAccessKey = <>SECRET_ACCESS_KEY>
+SecretAccessKey = <SECRET_ACCESS_KEY>
 Region = '<AWS_REGION>'" | sudo tee /etc/apt/s3auth.conf
 
 ❯ curl -sL http://<YOUR_HOST_FOR_APTLY>/repo_signing.key | gpg2 --dearmor | sudo tee /etc/apt/trusted.gpg.d/<HOST_REPO>.gpg >/dev/null
